@@ -281,6 +281,7 @@ function msg91($atts,$content=null,$shortcode){
 	// create sms payload Array
 	$payloadArr = array(); 
 	$payloadArr['sender'] = $sms['provider']['sender'];
+	$payloadArr['DLT_TE_ID'] = $sms['dlt_template_id'];
 	$payloadArr['route'] = $sms['provider']['route'];
 	$payloadArr['country'] = $sms['provider']['country'];
 	$payloadArr['sms'][0]['message'] = $sms['message'];
